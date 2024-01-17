@@ -4,12 +4,12 @@ from napalm import get_network_driver
 import getpass
 import json
 
-passwd = getpass.getpass('Please enter the password: ') # Reads the output from the user and save it as a string
+passwd = getpass.getpass(' *Password* ') 
 
 driver = get_network_driver('ios')
 switch_01 = {
-    "hostname": '10.10.20.19', 
-    "username": "cisco",
+    "hostname": '192.168.*.*', 
+    "username": "****",
     "password": passwd,
     "optional_args": {"secret": passwd}
     }
